@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: pojisteni auta update file
+name: services update file
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -24,7 +24,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     #- run: npm install --save https://github.com/archiverjs/node-archiver
-    - uses: ./.github/actions
+    #- uses: ./.github/actions
     
 
     - run: git config --local user.email "milan.somsedik@gmail.com"
@@ -40,5 +40,5 @@ jobs:
       with:
         source-directory: 'main'
         destination-github-username: 'kyberie'
-        destination-repository-name: 'automobil.data.beta'
+        destination-repository-name: 'services.data.beta'
         user-email: milan.somsedik@gmail.com
