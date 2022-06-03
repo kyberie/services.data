@@ -30,7 +30,7 @@ jobs:
     - run: git config --local user.email "milan.somsedik@gmail.com"
     - run: git config --local user.name "Milan Somsedik"
     - run: git add .
-    - run: git commit -m "commit"
+   # - run: git commit -m "commit"
     - run: git push origin beta
     
     - name: Pushes to another repository
