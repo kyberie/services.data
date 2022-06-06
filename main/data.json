@@ -24,7 +24,7 @@
 			"insur_comp_yeti_ids": [15844]
 		},
 		{
-			"id": 1,
+			"id": 2,
 			"name": "Miroslav Kopecký",
 			"contact_person": "Miroslav Kopecký",
 			"contact_person_phone": null,
@@ -46,7 +46,7 @@
 			"insur_comp_yeti_ids": [15844,17323]
 		},
 		{
-			"id": 1,
+			"id": 3,
 			"name": "AUTO BMW SERVIS s.r.o.",
 			"contact_person": null,
 			"contact_person_phone": null,
