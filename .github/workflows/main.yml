@@ -24,13 +24,13 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     #- run: npm install --save https://github.com/archiverjs/node-archiver
-    #- uses: ./.github/actions
+    - uses: ./.github/actions
     
 
     - run: git config --local user.email "milan.somsedik@gmail.com"
     - run: git config --local user.name "Milan Somsedik"
     - run: git add .
-   # - run: git commit -m "commit"
+    - run: git commit -m "commit"
     - run: git push origin beta
     
     - name: Pushes to another repository

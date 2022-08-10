@@ -3,9 +3,9 @@ var date = new Date();
 const archiver = require('archiver');
 
 
-fs.readFile('main/models.json', (err, data) => {
-  let models = JSON.parse(data);
-  let zip_name_all = models.logos_zip_file_all;
+fs.readFile('main/data.json', (err, data) => {
+  let json = JSON.parse(data);
+  let zip_name_all = json.logos_zip_file_all;
 
   var outputAll = fs.createWriteStream('main/' + zip_name_all);
   var archiveAll = archiver('zip', {
@@ -14,13 +14,13 @@ fs.readFile('main/models.json', (err, data) => {
   archiveAll.pipe(outputAll);
 
   var logos = [];
-  for (index in models.brands) {
-    var brand = models.brands[index];
-    var path = 'main/logo/' + brand.logo;
+  for (index in json.services) {
+    var service = json.services[index];
+    var path = 'main/logo/' + service.logo;
     if (fs.existsSync(path)) {
-      if (logos[brand.logo] != 1) {
-        archiveAll.file(path, { name: brand.logo });
-        logos[brand.logo] = 1;
+      if (logos[service.logo] != 1) {
+        archiveAll.file(path, { name: service.logo });
+        logos[service.logo] = 1;
       }
     }
   //  console.log(brand.logo);
