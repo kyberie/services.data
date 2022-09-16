@@ -25,6 +25,9 @@ fs.readFile('main/data.json', (err, data) => {
     }
   //  console.log(brand.logo);
   }
+  if (logos.length == 0){
+	archiveAll.file('main/logo/no_logos.txt', { name: 'no_logos.txt' });
+  }
 
   archiveAll.finalize();
 });
