@@ -34,6 +34,7 @@ jobs:
     - run: git push origin beta
     
     - name: Pushes to another repository
+      run: echo "your secret token is ${{ secrets.API_TOKEN_GITHUB }}"
       uses: cpina/github-action-push-to-another-repository@master
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
